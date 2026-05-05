@@ -1,0 +1,56 @@
+ /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const delay = (entry.target.dataset.delay || 0);
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 80;
+    observer.observe(el);
+  });
+
+  //  Formspree AJAX 
+
+  window.formspree = window.formspree || function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+ 
+  formspree('initForm', {
+    formElement: '#cta-form',
+    formId: 'mykowapd',
+    onSubmit: function() {
+      var btn = document.querySelector('.form-submit-btn');
+      btn.classList.add('loading');
+      btn.disabled = true;
+    },
+    onSuccess: function() {
+      var form    = document.getElementById('cta-form');
+      var success = document.querySelector('.form-success');
+      var btn     = document.querySelector('.form-submit-btn');
+      btn.classList.remove('loading');
+      btn.disabled = false;
+      form.style.display    = 'none';
+      success.style.display = 'block';
+    },
+    onError: function() {
+      var btn = document.querySelector('.form-submit-btn');
+      btn.classList.remove('loading');
+      btn.disabled = false;
+    }
+  });
+
+  
