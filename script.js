@@ -81,3 +81,10 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   
+  // Google reCAPTCHA required attribute fix
+window.onload = function() {
+  var el = document.getElementById('g-recaptcha-response');
+  if (el) {
+    el.setAttribute('required', 'required');
+  }
+}
