@@ -183,14 +183,18 @@
       display: flex; justify-content: center; align-items: center;
       position: relative;
     }
-    .hero-visual-wrap {
-      width: 650px; height: 650px;
-      background: rgba(255,255,255,.07);
+     .hero-visual-wrap {
+      width: 550px;
+      height: 550px;
+      background: rgb(255 255 255 / 3%);
       border: 1px solid rgba(255,255,255,.14);
-      border-radius: 10%;
-      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
+    
     /* ripple rings */
     .ring {
       position: absolute; border-radius: 50%;
@@ -204,12 +208,17 @@
       0%   { opacity: .6; transform: scale(.85); }
       100% { opacity: 0; transform: scale(1.1); }
     }
+
     .hero-logo-large {
-      width: 550px; height: 550px; object-fit: contain;
+      width: 900px;
+      height: 700px;
+      object-fit: contain;
       filter: drop-shadow(0 20px 40px rgba(0,0,0,.3));
-      position: relative; z-index: 2;
+      position: relative;
+      z-index: 2;
       animation: float 4s ease-in-out infinite;
     }
+    
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50%       { transform: translateY(-10px); }
