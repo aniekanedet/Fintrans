@@ -184,8 +184,8 @@
       position: relative;
     }
      .hero-visual-wrap {
-      width: 550px;
-      height: 550px;
+      width: 500px;
+      height: 500px;
       background: rgb(255 255 255 / 3%);
       border: 1px solid rgba(255,255,255,.14);
       border-radius: 50%;
@@ -210,13 +210,15 @@
     }
 
     .hero-logo-large {
-      width: 900px;
+      width: 550px;
       height: 700px;
       object-fit: contain;
       filter: drop-shadow(0 20px 40px rgba(0,0,0,.3));
       position: relative;
       z-index: 2;
       animation: float 4s ease-in-out infinite;
+      padding-top:35px;
+      padding-left:10px
     }
     
     @keyframes float {
