@@ -357,6 +357,50 @@
             </div>
             <span class="field-error" data-fs-error="phone"></span>
           </div>
+
+            <!-- What do you want to learn? (optional) -->
+          <div class="form-group">
+            <label class="form-label" for="learningGoal">
+              What do you want to learn?
+              <span class="label-optional">Optional</span>
+            </label>
+            <div class="select-wrap">
+              <select class="form-input form-select" id="learningGoal" name="learningGoal" data-fs-field>
+                <option value="" disabled selected>Pick a topic to start with…</option>
+                <optgroup label="Foundations">
+                  <option value="how-money-works">How money actually works</option>
+                  <option value="budgeting-saving">Budgeting &amp; saving strategies</option>
+                  <option value="avoid-financial-mistakes">How to avoid costly financial mistakes</option>
+                </optgroup>
+                <optgroup label="Investing">
+                  <option value="stocks-basics">Stocks &amp; shares — the basics</option>
+                  <option value="crypto-explained">Crypto explained simply</option>
+                  <option value="forex-trading">Forex &amp; currency trading</option>
+                  <option value="real-estate">Real estate &amp; property investing</option>
+                </optgroup>
+                <optgroup label="Protection">
+                  <option value="scam-protection">How to spot &amp; avoid financial scams</option>
+                  <option value="risk-management">Understanding &amp; managing risk</option>
+                  <option value="insurance-basics">Insurance &amp; financial safety nets</option>
+                </optgroup>
+                <optgroup label="Growth">
+                  <option value="building-wealth">Building long-term wealth</option>
+                  <option value="passive-income">Passive income — what's real</option>
+                  <option value="business-finance">Finance for small business owners</option>
+                </optgroup>
+                <option value="not-sure">I'm not sure yet — show me where to start</option>
+              </select>
+              <!-- custom chevron -->
+              <span class="select-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+ 
           <!-- Google reCAPTCHA -->
           <div class="form-group">
             <div class="g-recaptcha g-recaptcha-response" data-sitekey="6LeYW9wsAAAAAHqJo5dvsQPGfAM2pcfHuLj4Uwj-"></div>

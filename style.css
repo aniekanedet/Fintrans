@@ -522,6 +522,41 @@
       display: block; text-align: center; margin-top: 12px;
       font-size: 13px; color: rgba(255,255,255,.45);
     }
+
+    /* ── OPTIONAL BADGE ── */
+    .label-optional {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase;
+      color: rgba(255,255,255,.38);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px; padding: 2px 8px;
+      margin-left: 2px;
+    }
+ 
+    /* ── SELECT DROPDOWN ── */
+    .select-wrap {
+      position: relative; display: flex; align-items: center;
+    }
+    .form-select {
+      appearance: none; -webkit-appearance: none;
+      cursor: pointer; padding-right: 42px;
+      /* override :invalid colour so placeholder reads correctly */
+      color: var(--text-black);
+    }
+    .form-select:invalid,
+    .form-select option[value=""] { color: #9CA3AF; }
+    .form-select option            { color: var(--text-black); }
+    .form-select optgroup          { color: var(--grey-soft); font-style: normal; font-weight: 700; font-size: 13px; }
+    .select-arrow {
+      position: absolute; right: 14px;
+      pointer-events: none; color: var(--grey-soft);
+      display: flex; align-items: center;
+      transition: color .2s, transform .2s;
+    }
+    .select-wrap:focus-within .select-arrow {
+      color: var(--blue-ocean); transform: rotate(180deg);
+    }
+    
     .form-success { text-align: center; padding: 12px 0 24px; }
     .success-icon {
       width: 56px; height: 56px; border-radius: 50%;
